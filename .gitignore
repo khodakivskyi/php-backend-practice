@@ -1,0 +1,65 @@
+# ==========================
+# ОС та IDE
+# ==========================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.log
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ==========================
+# PHP / Composer
+# ==========================
+vendor/
+composer.lock
+
+# ==========================
+# Node / Frontend (якщо є)
+# ==========================
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ==========================
+# IDE / редактори
+# ==========================
+# WebStorm / PhpStorm
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# ==========================
+# Docker
+# ==========================
+*.env
+docker-compose.override.yml
+docker-compose.override.yaml
+*.log
+*.tmp
+
+# ==========================
+# Кеш / тимчасові файли
+# ==========================
+*.cache
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# ==========================
+# Веб / результати збірки
+# ==========================
+/www/*.log
+/www/*.cache
+/www/.sass-cache/
