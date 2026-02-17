@@ -63,3 +63,4 @@ docker-compose.override.yaml
 /www/*.log
 /www/*.cache
 /www/.sass-cache/
+/www/upload/

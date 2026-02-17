@@ -1,8 +1,3 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,13 +5,12 @@ ini_set('display_errors', 1);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PHP labs</title>
+    <title>Document</title>
 </head>
 <body>
-    <h2>Список проектів:</h2>
-    <ul>
-        <li><a href="lab01/">Lab 1</a></li>
-        <li><a href="lab02/">Lab 2</a></li>
-    </ul>
+<a href="task01/index.html">Task01</a><br>
+<a href="task02/index.php">Task02</a><br>
+<a href="task03/index.php">Task03</a><br>
+<a href="task04/index.php">Task04</a>
 </body>
 </html>
