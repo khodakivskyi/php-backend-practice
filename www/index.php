@@ -18,6 +18,7 @@ ini_set('display_errors', 1);
         <li><a href="lab01/">Lab 1</a></li>
         <li><a href="lab02/">Lab 2</a></li>
         <li><a href="lab03/">Lab 3</a></li>
+        <li><a href="lab04/">Lab 4</a></li>
     </ul>
 </body>
 </html>
