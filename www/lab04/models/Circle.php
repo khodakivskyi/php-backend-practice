@@ -4,9 +4,9 @@ namespace models;
 
 class Circle
 {
-    public int $x;
-    public int $y;
-    public int $radius;
+    private int $x;
+    private int $y;
+    private int $radius;
 
     public function __construct($x, $y, $radius)
     {
@@ -45,5 +45,13 @@ class Circle
     public function __toString(): string
     {
         return "Коло з центром в ($this->x, $this->y) і радіусом $this->radius";
+    }
+
+    public function circlesIntersect(Circle $other): bool
+    {
+        $dx = $other->x - $this->x;
+        $dy = $other->y - $this->y;
+
+        return ($dx * $dx + $dy * $dy) <= (($this->radius + $other->radius) * ($this->radius + $other->radius));
     }
 }
