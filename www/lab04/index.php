@@ -2,14 +2,6 @@
 require_once('utils/autoload.php');
 require_once('utils/printLine.php');
 
-/*
-use views\UserView;
-use models\UserModel;
-$obj1 = new UserModel();
-$obj2 = new UserView();
-$obj1->index();
-$obj2->index();
-*/
 
 use models\Circle;
 
