@@ -10,5 +10,6 @@
 <body>
 <a href="task01/index.php">Task01</a><br>
 <a href="task02/index.php">Task02</a><br>
+<a href="task03/index.php">Task03</a><br>
 </body>
 </html>
