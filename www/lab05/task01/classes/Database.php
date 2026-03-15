@@ -4,7 +4,7 @@ namespace classes;
 
 use PDO;
 use PDOException;
-use classes\User;
+use classes\UserService;
 
 class Database
 {
@@ -30,7 +30,7 @@ class Database
         }
     }
 
-    public function getUserByLogin(string $login): ?User
+    public function getUserByLogin(string $login): ?UserService
     {
         $stmt = $this->pdo->prepare("SELECT * FROM users WHERE login = ?");
         $stmt->execute([$login]);
@@ -38,20 +38,20 @@ class Database
 
         if (!$data) return null;
 
-        return new User($data);
+        return new UserService($data);
     }
 
-    public function getUserById(int $id): ?User
+    public function getUserById(int $id): ?UserService
     {
         $stmt = $this->pdo->prepare("SELECT * FROM users WHERE id = ?");
         $stmt->execute([$id]);
         $data = $stmt->fetch();
 
         if (!$data) return null;
-        return new User($data);
+        return new UserService($data);
     }
 
-    public function addUser(User $user): ?User
+    public function addUser(UserService $user): ?UserService
     {
         $hash = password_hash($user->password, PASSWORD_DEFAULT);
 
@@ -78,7 +78,7 @@ class Database
         return $this->getUserById($id);
     }
 
-    public function updateUser(User $user): ?User
+    public function updateUser(UserService $user): ?UserService
     {
         $stmt = $this->pdo->prepare("
         UPDATE users 
@@ -100,7 +100,7 @@ class Database
         return $this->getUserById($user->id);
     }
 
-    public function deleteUser(User $user): bool
+    public function deleteUser(UserService $user): bool
     {
         try {
             $stmt = $this->pdo->prepare("DELETE FROM users WHERE id = ?");

@@ -5,7 +5,7 @@ include_once("./classes/Database.php");
 
 use classes\Service;
 use classes\Database;
-use classes\User;
+use classes\UserService;
 
 session_start();
 
@@ -20,7 +20,7 @@ $db = new Database();
 $service = new Service($db);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $updatedUser = new \classes\User([
+    $updatedUser = new \classes\UserService([
         'id' => $loggedInUser->id,
         'login' => $_POST['login'] ?? $loggedInUser->login,
         'email' => $_POST['email'] ?? $loggedInUser->email,

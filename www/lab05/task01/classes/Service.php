@@ -11,7 +11,7 @@ readonly class Service
         $this->db = $db;
     }
 
-    public function addUser(User $user): ?User
+    public function addUser(UserService $user): ?UserService
     {
         try {
             if (empty($user->login) || strlen($user->login) < 4) return null;
@@ -26,7 +26,7 @@ readonly class Service
         }
     }
 
-    public function getUserByLogin(string $login, string $password): ?User
+    public function getUserByLogin(string $login, string $password): ?UserService
     {
         try {
             $user = $this->db->getUserByLogin($login);
@@ -38,7 +38,7 @@ readonly class Service
         }
     }
 
-    public function getUserById(int $id): ?User
+    public function getUserById(int $id): ?UserService
     {
         try {
             return $this->db->getUserById($id);
@@ -47,7 +47,7 @@ readonly class Service
         }
     }
 
-    public function updateUser(User $user): ?User
+    public function updateUser(UserService $user): ?UserService
     {
         try {
             $existingUser = $this->db->getUserById($user->id);
@@ -59,7 +59,7 @@ readonly class Service
         }
     }
 
-    public function deleteUser(User $user): bool
+    public function deleteUser(UserService $user): bool
     {
         try {
             return $this->db->deleteUser($user);

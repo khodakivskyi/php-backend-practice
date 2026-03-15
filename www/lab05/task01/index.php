@@ -4,7 +4,7 @@ include_once("./classes/User.php");
 include_once("./classes/Service.php");
 include_once("./classes/Database.php");
 
-use classes\User;
+use classes\UserService;
 use classes\Database;
 use classes\Service;
 
@@ -19,7 +19,7 @@ $loggedInUser = $_SESSION['User'] ?? null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($page === 'register') {
-        $user = new User([
+        $user = new UserService([
             'login' => $_POST['login'] ?? '',
             'password' => $_POST['password'] ?? '',
             'email' => $_POST['email'] ?? '',
