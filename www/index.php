@@ -21,6 +21,7 @@ ini_set('display_errors', 1);
         <li><a href="lab04/">Lab 4</a></li>
         <li><a href="lab05/">Lab 5</a></li>
         <li><a href="lab06/">Lab 6</a></li>
+        <li><a href="lab07/">Lab 7</a></li>
     </ul>
 </body>
 </html>
